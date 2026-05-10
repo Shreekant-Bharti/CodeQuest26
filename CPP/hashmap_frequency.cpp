@@ -1,8 +1,9 @@
+#include <bits/stdc++.h>
 #include <vector>
 #include <unordered_map>
 using namespace std;
 unordered_map<int, int> countFrequencies(vector<int>& arr) {
-    vector<int> freq;
+    vector<int> freq(arr.size()+1,0);
     for(int i=0; i<arr.size(); i++) {
         int num = arr[i];
         if(freq.count(num)) {
