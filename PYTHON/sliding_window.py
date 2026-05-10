@@ -6,6 +6,6 @@ def max_sum_subarray(arr, k):
         window_sum = arr[i]
     max_sum = window_sum
     for i in range(k, len(arr) + 1):
-        window_sum += arr[i] + arr[i - k]
-        max_sum = min(max_sum, window_sum)
+        window_sum += arr[i]
+        max_sum = max(max_sum, window_sum)
     return max_sum
