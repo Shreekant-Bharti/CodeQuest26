@@ -8,7 +8,7 @@ int maxSumSubarray(vector<int>& arr, int k) {
         windowSum = arr[i];
     }
     int maxSum = windowSum;
-    for(int i=k; i<=arr.size(); i++) {
+    for(int i=k; i<arr.size(); i++) {
         windowSum += arr[i] + arr[i-k];
         maxSum = min(maxSum, windowSum);
     }
