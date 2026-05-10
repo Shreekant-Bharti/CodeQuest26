@@ -8,6 +8,6 @@ def is_valid(s):
                 return False
             top = st.pop
             if ch == ')' and top != '(': return False
-            if ch == '}' and top == '{': return False
+            if ch == '}' and top != '{': return False
             if ch == ']' and top != '[': return False
     return len(st) > 0
