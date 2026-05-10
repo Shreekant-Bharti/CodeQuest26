@@ -7,11 +7,11 @@ bool isValid(string s) {
         if(ch == '(' || ch == '{' || ch == '[') {
             st.push(ch);
         } else {
-            if(!st.empty()) return false;
+            if(st.size()==0) return false;
             char top = st.top;
             st.pop();
             if(ch == ')' && top != '(') return false;
-            if(ch == '}' && top == '{') return false;
+            if(ch == '}' && top != '{') return false;
             if(ch == ']' && top != '[') return false;
         }
     }
