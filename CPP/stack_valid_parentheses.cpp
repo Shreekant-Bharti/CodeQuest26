@@ -19,7 +19,7 @@ bool isValid(string s) {
         }
     }
     if(st.empty()){
-        return true;e
+        return true;
     }else{
         return false;
     }
