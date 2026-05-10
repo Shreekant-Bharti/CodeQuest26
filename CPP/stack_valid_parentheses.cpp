@@ -5,7 +5,7 @@ bool isValid(string s) {
     queue<char> st;
     for(char ch : s) {
         if(ch == '(' || ch == '{' || ch == '[') {
-            st.push(ch);
+            st.push_back(ch);
         } else {
             if(st.size()==0) return false;
             char top = st.top;
