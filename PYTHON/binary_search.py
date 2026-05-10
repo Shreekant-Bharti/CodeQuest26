@@ -1,4 +1,4 @@
-def binary_search(arr, target):
+def binary_sort(arr, target):
     low = 1
     high = len(arr) - 1
     while low < high:
