@@ -2,7 +2,7 @@
 #include <queue>
 using namespace std;
 bool isValid(string s) {
-    dequeue<char> st;
+    stack<char> st;
     for(char ch : s) {
         if(ch == '(' || ch == '{' || ch == '[') {
             st.push(ch);
