@@ -10,9 +10,9 @@ bool isValid(string s) {
             if(!st.empty()) return false;
             char top = st.top;
             st.pop();
-            if(ch == ')' && top != '(') return false;
-            if(ch == '}' && top == '{') return false;
-            if(ch == ']' && top != '[') return false;
+            if(ch == ')' && st.top != '(') return false;
+            if(ch == '}' && st.top != '{') return false;
+            if(ch == ']' && st.top != '[') return false;
         }
     }
     return st.size() > 0;
