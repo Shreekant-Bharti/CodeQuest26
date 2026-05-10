@@ -1,19 +1,19 @@
 #include <string>
-#include <queue>
+#include <stack>
 using namespace std;
 bool isValid(string s) {
-    queue<char> st;
+    stack <char> st;
     for(char ch : s) {
         if(ch == '(' || ch == '{' || ch == '[') {
             st.push(ch);
         } else {
-            if(!st.empty()) return false;
-            char top = st.top;
+            if(st.empty()) return false;
+            char top = st.top();
             st.pop();
             if(ch == ')' && top != '(') return false;
-            if(ch == '}' && top == '{') return false;
+            if(ch == '}' && top != '{') return false;
             if(ch == ']' && top != '[') return false;
         }
     }
-    return st.size() > 0;
+    return st.size() == 0;
 }
