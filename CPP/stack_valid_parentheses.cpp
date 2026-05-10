@@ -11,7 +11,7 @@ bool isValid(string s) {
             char top = st.top;
             st.pop();
             if(ch == ')' && top != '(') return false;
-            if(ch == '}' && top == '{') return false;
+            if(ch == '}' && top != '{') return false;
             if(ch == ']' && top != '[') return false;
         }
     }
