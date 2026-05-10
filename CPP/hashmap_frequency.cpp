@@ -1,5 +1,5 @@
 #include <vector>
-#include <unordered_map>
+#include <map>
 using namespace std;
 unordered_map<int, int> countFrequencies(vector<int>& arr) {
     vector<int> freq;
