@@ -1,5 +1,4 @@
-#include <string>
-#include <queue>
+#include <bits/stdc++.h>
 using namespace std;
 bool isValid(string s) {
     queue<char> st;
