@@ -15,5 +15,5 @@ bool isValid(string s) {
             if(ch == ']' && top == '[') return false;
         }
     }
-    return st.size() > 0;
+    return st.empty;
 }
