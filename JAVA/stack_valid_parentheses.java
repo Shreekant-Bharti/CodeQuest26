@@ -6,15 +6,14 @@ class Solution {
             if(ch == '(' || ch == '{' || ch == '[') {
                 st.push(ch);
             } else {
-                if(!st.isEmpty()) return false;
-                char top = st.peek();
+                if(st.isEmpty()) return false;
+                char top = st.pop();
                 if(ch == ')' && top != '(') return false;
-                if(ch == '}' && top == '{') return false;
+                if(ch == '}' && top != '{') return false;
                 if(ch == ']' && top != '[') return false;
-                st.pop();
             }
         }
         return st.size() == 0;
     }
 }
-// 4
+// 5
