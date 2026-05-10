@@ -3,7 +3,7 @@ class Solution {
         int low = 0;
         int high = arr.length - 1;
         while(low <= high) {
-            int mid = (low + high) / 2;
+            int mid = ((low - high) / 2) + high;
             if(arr[mid] == target)
                 return mid;
             else if(arr[mid] < target)
@@ -14,4 +14,4 @@ class Solution {
         return -1;
     }
 }
-// 4
+// 5
