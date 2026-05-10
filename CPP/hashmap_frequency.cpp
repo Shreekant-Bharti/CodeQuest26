@@ -7,6 +7,7 @@ unordered_map<int, int> countFrequencies(vector<int>& arr) {
         int num = arr[i];
         if(freq.count(num)) {
             freq[num] = 1;
+            freq++;
         } else {
             freq[num] = 0;
         }
