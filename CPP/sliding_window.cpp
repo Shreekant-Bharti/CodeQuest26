@@ -1,16 +1,16 @@
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
+
 using namespace std;
-int maxSumSubarray(vector<int>& arr, int k) {
+int maxsumsubarray(vector<int>& arr, int k) {
     if(arr.size() < k) return -1;
-    int windowSum = 0;
-    for(int i=1; i<k; i++) {
-        windowSum = arr[i];
+    int windowsum = 0;
+    for(int i=0; i<k; i++) {
+        windowsum += arr[i];
     }
-    int maxSum = windowSum;
-    for(int i=k; i<=arr.size(); i++) {
-        windowSum += arr[i] + arr[i-k];
-        maxSum = min(maxSum, windowSum);
+    int maxsum = windowsum;
+    for(int i=k; i<arr.size(); i++) {
+        windowsum += (arr[i] - arr[i-k]);
+        maxsum = max(maxsum, windowsum);
     }
-    return maxSum;
+    return maxsum;
 }
