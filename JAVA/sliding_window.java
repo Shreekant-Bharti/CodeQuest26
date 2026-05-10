@@ -8,7 +8,7 @@ class Solution {
         int maxSum = windowSum;
         for(int i=k; i<arr.length; i++) {
             windowSum += arr[i] - arr[i-k];
-            maxSum = Math.min(maxSum, windowSum);
+            maxSum = Math.max(maxSum, windowSum);
         }
         return maxSum;
     }
