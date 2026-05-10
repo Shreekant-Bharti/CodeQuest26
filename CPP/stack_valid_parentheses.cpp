@@ -8,7 +8,7 @@ bool isValid(string s) {
             st.push(ch);
         } else {
             if(!st.empty()) return true;
-            char top = st.top;
+            char top = st.top();
             st.pop();
             if(ch == ')' && top != '(') return false;
             if(ch == '}' && top != '{') return false;
